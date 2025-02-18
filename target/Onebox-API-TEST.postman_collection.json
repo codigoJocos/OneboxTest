@@ -1,0 +1,163 @@
+{
+	"info": {
+		"_postman_id": "854f618d-9a3a-4892-9f1f-3eb4cd8e7e0c",
+		"name": "Onebox-API-TEST",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20613006",
+		"_collection_link": "https://orange-rocket-43907.postman.co/workspace/3898136f-973e-447f-9662-cd478ed7d0cf/collection/20613006-854f618d-9a3a-4892-9f1f-3eb4cd8e7e0c?action=share&source=collection_link&creator=20613006"
+	},
+	"item": [
+		{
+			"name": "List of all products",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "",
+							"value": "list",
+							"type": "text"
+						},
+						{
+							"key": "asdasd",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/ONEBOX-1.0/cart?action=list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ONEBOX-1.0",
+						"cart"
+					],
+					"query": [
+						{
+							"key": "action",
+							"value": "list"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find product by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/ONEBOX-1.0/cart?action=find&id=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ONEBOX-1.0",
+						"cart"
+					],
+					"query": [
+						{
+							"key": "action",
+							"value": "find"
+						},
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add a product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "action",
+							"value": "add",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "banana",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "They usually are yellow.",
+							"type": "text"
+						},
+						{
+							"key": "amount",
+							"value": "12",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/ONEBOX-1.0/cart",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ONEBOX-1.0",
+						"cart"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a product",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "http://localhost:8080/ONEBOX-1.0/cart?id=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ONEBOX-1.0",
+						"cart"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
